@@ -38,7 +38,7 @@ public:
 	string & getDate();
 	string & getCountry();
 	bool isValid();
-
+		//asdf
 
 private:
 	string IDno;
