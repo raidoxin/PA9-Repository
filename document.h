@@ -11,6 +11,7 @@
 
 //using std::string cuz I don't feel like typing that out every time
 using std::string;
+using std::endl;
 
 class passport {
 
@@ -46,7 +47,8 @@ public:
 	string & getDate();
 	string & getCountry();
 	bool isValid();
-	
+	//Super printer
+	void print_all();
 
 
 	//master corruptor

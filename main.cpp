@@ -9,8 +9,9 @@ int main(void) {
 
 	test = *testy;
 	delete testy;
-	std::cout << test.getCountry();
+	test.print_all();
 	test.master_corruptor(1);
+	test.print_all();
 
 	system("pause");
 	return 0;

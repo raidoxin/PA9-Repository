@@ -14,7 +14,6 @@ passport::passport()
 	country = "Vastlund";
 	valid = true;
 }
-
 passport & passport::operator=(passport & copied)
 {
 	//check for self assign
@@ -249,4 +248,16 @@ void passport::master_corruptor(int odds)//public corruptor
 	{
 		std::cout << "Data was not corrupted" << std::endl;
 	}
+}
+void passport::print_all()
+{
+	std::cout << IDno<<endl;
+	std::cout<<DoB<<endl;
+	std::cout<<sex<<endl;
+	std::cout<<firstN<<endl;
+	std::cout<<lastN<<endl;
+	std::cout<<height << endl;
+	std::cout<<weight << endl;
+	std::cout<<date << endl;
+	std::cout<<country << endl<<endl;
 }
