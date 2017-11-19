@@ -5,11 +5,13 @@
 #include <cstdlib>
 #include <string.h>
 #include <stdlib.h>
+#include <ctime>
 
 
 
 //using std::string cuz I don't feel like typing that out every time
 using std::string;
+using std::endl;
 
 class passport {
 
@@ -45,9 +47,12 @@ public:
 	string & getDate();
 	string & getCountry();
 	bool isValid();
-	
+	//Super printer
+	void print_all();
 
-	void public_corruptor(int odds);
+
+	//master corruptor
+	void master_corruptor(int odds); //odds act as percentage chance
 
 private:
 	string IDno;
@@ -63,11 +68,15 @@ private:
 	string country;
 	//for use later
 	bool valid;
-
-	//corruptors
+	//corruptors --do not call 
 	void corruptIdno(int odds);
 	void corruptDob(int odds);
 	void corruptsex(int odds);
 	void corruptfirstN(int odds);
 	void corruptlastN(int odds);
+	void corruptheight(int odds);
+	void corruptweight(int odds);
+	void corruptdate(int odds);
+	void corruptcountry(int odds);
+
 };

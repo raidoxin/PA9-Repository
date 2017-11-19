@@ -116,6 +116,9 @@
     <ClCompile Include="..\..\document.cpp" />
     <ClCompile Include="..\..\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Information.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
