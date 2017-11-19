@@ -134,7 +134,7 @@ void passport::corruptIdno(int odds)
 	{
 		if (!(rand() % (100 / odds)) && valid != false)
 		{
-			IDno[i] = 48 + rand() % 10;
+			IDno[i] = 97 + rand() % 26;
 			valid = false;
 		}
 
@@ -146,7 +146,7 @@ void passport::corruptDob(int odds)
 	{
 		if (!(rand() % (100 / odds)) && valid != false)
 		{
-			DoB[i] = 48 + rand() % 10;
+			DoB[i] = 97 + rand() % 26;
 			valid = false;
 		}
 
@@ -166,7 +166,7 @@ void passport::corruptfirstN(int odds)
 	{
 		if (!(rand() % (100 / odds)) && valid != false)
 		{
-			firstN[i] = 48 + rand() % 10;
+			firstN[i] = 97 + rand() % 26;
 			valid = false;
 		}
 
@@ -178,7 +178,7 @@ void passport::corruptlastN(int odds)
 	{
 		if (!(rand() % (100 / odds)) && valid != false)
 		{
-			lastN[i] = 48 + rand() % 10;
+			lastN[i] = 97 + rand() % 26;
 			valid = false;
 		}
 
@@ -209,15 +209,25 @@ void passport::corruptdate(int odds)
 	{
 		if (!(rand() % (100 / odds)) && valid != false)
 		{
-			date[i] = 48 + rand() % 10;
+			date[i] = 97 + rand() % 26;
 			valid = false;
 		}
 		
 	}
 }
-void passport::corruptcountry(int odds)
+void passport::corruptcountry(int odds)  //will finish with country choice randomizer
 {
+	{
+		for (int i = 0; i < country.length(); i++)
+		{
+			if (!(rand() % (100 / odds)) && valid != false)
+			{
+				country[i] = 97 + rand() % 26;
+				valid = false;
+			}
 
+		}
+	}
 }
 void passport::master_corruptor(int odds)//public corruptor
 {
