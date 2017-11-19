@@ -1,5 +1,12 @@
 #pragma once
-#include<string>
+#include <string>
+#include <iostream>
+#include <stdio.h>
+#include <cstdlib>
+#include <string.h>
+#include <stdlib.h>
+
+
 
 //using std::string cuz I don't feel like typing that out every time
 using std::string;
@@ -38,7 +45,9 @@ public:
 	string & getDate();
 	string & getCountry();
 	bool isValid();
-		//asdf
+	
+
+	void public_corruptor(int odds);
 
 private:
 	string IDno;
@@ -52,7 +61,13 @@ private:
 	unsigned int weight;
 	string date;
 	string country;
-	
 	//for use later
 	bool valid;
+
+	//corruptors
+	void corruptIdno(int odds);
+	void corruptDob(int odds);
+	void corruptsex(int odds);
+	void corruptfirstN(int odds);
+	void corruptlastN(int odds);
 };

@@ -1,5 +1,5 @@
 #include"document.h"
-#include<iostream>
+
 
 int main(void) {
 	passport test , *testy = new passport;
