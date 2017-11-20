@@ -22,7 +22,8 @@ public:
 	void incrementday();
 	void decrementlives();
 	//debugshowdata();
-
+	unsigned int getlives();
+	passport getpassport();
 private:
 	//doxx
 	passport passport_dox;

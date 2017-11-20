@@ -103,3 +103,11 @@ string & gamedata::getrando(vector<string>& spec)
 {
 	return spec.at(rand() % spec.size());
 }
+unsigned int gamedata::getlives()
+{
+	return lives;
+}
+passport gamedata::getpassport()
+{
+	return passport_dox;
+}
