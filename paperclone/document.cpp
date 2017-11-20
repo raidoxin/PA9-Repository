@@ -1,6 +1,6 @@
 #include "document.h"
 
-//again, this default constructor creates a passport fiolled with default data for testing purposes
+//again, this default constructor creates a passport filled with default data for testing purposes
 passport::passport()
 {
 	IDno = "8675309";
@@ -153,11 +153,11 @@ void passport::corruptDob(int odds)
 }
 void passport::corruptsex(int odds)
 {
-		if (!(rand() % (100 / odds)) && valid != false)
-		{
-			sex = !sex;
-			valid = false;
-		}
+	if (!(rand() % (100 / odds)) && valid != false)
+	{
+		sex = !sex;
+		valid = false;
+	}
 }
 void passport::corruptfirstN(int odds)
 {
@@ -186,11 +186,11 @@ void passport::corruptlastN(int odds)
 void passport::corruptheight(int odds)
 {
 
-		if (!(rand() % (100 / odds)) && valid != false)
-		{
-			height += rand() % 20;
-			valid = false;
-		}
+	if (!(rand() % (100 / odds)) && valid != false)
+	{
+		height += rand() % 20;
+		valid = false;
+	}
 
 }
 void passport::corruptweight(int odds)
@@ -211,7 +211,7 @@ void passport::corruptdate(int odds)
 			date[i] = 97 + rand() % 26;
 			valid = false;
 		}
-		
+
 	}
 }
 void passport::corruptcountry(int odds)  //will finish with country choice randomizer
@@ -251,13 +251,13 @@ void passport::master_corruptor(int odds)//public corruptor
 }
 void passport::print_all()
 {
-	std::cout << IDno<<endl;
-	std::cout<<DoB<<endl;
-	std::cout<<sex<<endl;
-	std::cout<<firstN<<endl;
-	std::cout<<lastN<<endl;
-	std::cout<<height << endl;
-	std::cout<<weight << endl;
-	std::cout<<date << endl;
-	std::cout<<country << endl<<endl;
+	std::cout << IDno << endl;
+	std::cout << DoB << endl;
+	std::cout << sex << endl;
+	std::cout << firstN << endl;
+	std::cout << lastN << endl;
+	std::cout << height << endl;
+	std::cout << weight << endl;
+	std::cout << date << endl;
+	std::cout << country << endl << endl;
 }
