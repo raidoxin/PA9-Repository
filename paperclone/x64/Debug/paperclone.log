@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\cool user\source\repos\pa9-repository\paperclone\main.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  gamedata.cpp
+  document.cpp
+  Generating Code...
+  paperclone.vcxproj -> C:\Users\COOL USER\Source\Repos\PA9-Repository\x64\Debug\paperclone.exe
+  paperclone.vcxproj -> C:\Users\COOL USER\Source\Repos\PA9-Repository\x64\Debug\paperclone.pdb (Partial PDB)

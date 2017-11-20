@@ -49,10 +49,10 @@ gamedata::gamedata() {
 void gamedata::genchara()
 {
 	int rando;
-	passport.setFirst(getrando(firstnames));
-	passport.setLast(getrando(lastnames));
+	passport_dox.setFirst(getrando(firstnames));
+	passport_dox.setLast(getrando(lastnames));
 	rando = rand() % (NATIONS - 1);
-	passport.setCountry(getnation(rando));
+	passport_dox.setCountry(getnation(rando));
 }
 
 void gamedata::incrementday()
@@ -70,7 +70,7 @@ void gamedata::decrementlives()
 //reads strings from a file
 //loads a line into a buffer, then puts it on the vector
 //assumes there's only one input per line
-void gamedata::populatenamelist(vector<string>& load, string & filename)
+void gamedata::populatenamelist(vector<string>& load, string  filename)
 {
 	std::ifstream file(filename);
 	string buffer;

@@ -1,5 +1,5 @@
 #pragma once
-#include"document.h"
+#include"document.cpp"
 #include<vector>
 #include<fstream>
 
@@ -25,7 +25,7 @@ public:
 
 private:
 	//doxx
-	passport passport;
+	passport passport_dox;
 
 	//this array holds the nations on the first row
 	// and the corresponding cities in the following rows in the coresponding column
@@ -45,7 +45,7 @@ private:
 	//private functions
 
 	//This is used to populate the vectors during initialization
-	void populatenamelist(vector <string> & load, std::string & filename);
+	void populatenamelist(vector <string> & load, std::string  filename);
 	//these get a nation based on the number provided
 	string & getnation(int & rand);
 	string & getcity(int & nation);
