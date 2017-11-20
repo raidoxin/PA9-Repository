@@ -1,14 +1,13 @@
 #include"document.h"
+#include"gamedata.h"
 
 
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
-	passport test , *testy = new passport;
-	testy->setCountry((std::string)"SAoVQ");
-
-
-	test = *testy;
-	delete testy;
+	passport test;
+	gamedata testo;
+	//testy->setCountry((std::string)"SAoVQ");
+	testo.genchara();
 	test.print_all();
 	test.master_corruptor(1);
 	test.print_all();
