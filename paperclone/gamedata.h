@@ -1,11 +1,12 @@
 #pragma once
-#include"document.cpp"
+#include"document.h"
 #include<vector>
 #include<fstream>
 
 //Making these defines to kkep track of nation size and number of cities should we change our minds
 #define NATIONS 5
 #define CITIES 4
+#define THECURRENTYEAR 2038
 
 using std::vector;
 
@@ -21,7 +22,9 @@ public:
 
 	void incrementday();
 	void decrementlives();
-	//debugshowdata();
+
+
+	void debugshowdata();
 
 private:
 	//doxx
@@ -45,11 +48,18 @@ private:
 	//private functions
 
 	//This is used to populate the vectors during initialization
-	void populatenamelist(vector <string> & load, std::string  filename);
+	void populatenamelist(vector <string> & load, std::string & filename);
 	//these get a nation based on the number provided
 	string & getnation(int & rand);
 	string & getcity(int & nation);
 	//this gets a random string form the specified vector
 	string & getrando(vector <string> & spec);
-
+	//Generates a 9 digit ID Number
+	string genID();
+	//Generates a Birthday;
+	string genBirth();
+	//Generate Height
+	int genHeight();
+	//Generate Wight
+	int genWeight();
 };

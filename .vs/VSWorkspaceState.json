@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\paperclone",
+    "\\x64"
   ],
+  "SelectedNode": "\\paperclone\\gamedata.h",
   "PreviewInSolutionExplorer": false
 }

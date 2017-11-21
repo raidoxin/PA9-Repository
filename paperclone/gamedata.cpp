@@ -38,7 +38,7 @@ gamedata::gamedata() {
 	populatenamelist(lastnames, (string)"lastnames.txt");
 	populatenamelist(missions, (string)"missions.txt");
 
-	//
+	//set the day count and lives
 	lives = 3;
 	days = 0;
 }
@@ -48,11 +48,20 @@ gamedata::gamedata() {
 // for now, just makes a passport
 void gamedata::genchara()
 {
+	//this holds a rondom number as needed
 	int rando;
+
+	// passport generation to be combined into a single function later
 	passport_dox.setFirst(getrando(firstnames));
 	passport_dox.setLast(getrando(lastnames));
 	rando = rand() % (NATIONS - 1);
 	passport_dox.setCountry(getnation(rando));
+	passport_dox.setID(genID());
+	passport_dox.setBirth(genBirth());
+	passport_dox.setSex((bool)(rand() % 2));
+	passport_dox.setWeight(genWeight());
+	passport_dox.setHeight(genHeight());
+
 }
 
 void gamedata::incrementday()
@@ -66,11 +75,16 @@ void gamedata::decrementlives()
 		lives--;
 }
 
+void gamedata::debugshowdata()
+{
+	passport_dox.print_all();
+}
+
 //this populates the gamedata vectors
 //reads strings from a file
 //loads a line into a buffer, then puts it on the vector
 //assumes there's only one input per line
-void gamedata::populatenamelist(vector<string>& load, string  filename)
+void gamedata::populatenamelist(vector<string>& load, string & filename)
 {
 	std::ifstream file(filename);
 	string buffer;
@@ -102,4 +116,35 @@ string & gamedata::getcity(int & nation)
 string & gamedata::getrando(vector<string>& spec)
 {
 	return spec.at(rand() % spec.size());
+}
+
+string gamedata::genID()
+{
+	string buff;
+	// loop 9 times ,inserting a random number from 1 to 10 each time
+	for (int i = 0; i < 9; i++) {
+		buff += std::to_string((rand() % 9) + 1);
+	}
+	return buff;
+}
+//Generates Birthday in a DD-MM-YYYY format
+string gamedata::genBirth()
+{
+	string buff;
+	buff += std::to_string((rand() % 30) + 1);
+	buff += '-';
+	buff += std::to_string((rand() % 12) + 1);
+	buff +='-';
+	buff += std::to_string(THECURRENTYEAR - 18 - (rand() % 100));
+	return buff;
+}
+
+int gamedata::genHeight()
+{
+	return (rand() % 62) + 152;
+}
+
+int gamedata::genWeight()
+{
+	return (rand() % 92) + 45;
 }

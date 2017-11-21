@@ -27,11 +27,11 @@ public:
 	//setters
 	void setID(string & newID);
 	void setBirth(string & newDoB);
-	void setSex(bool & newsex);
+	void setSex(bool newsex);
 	void setFirst(string & newFirst);
 	void setLast(string & newLast);
-	void setHeight(unsigned int & newHeight);
-	void setWeight(unsigned int & newWeight);
+	void setHeight(unsigned int newHeight);
+	void setWeight(unsigned int newWeight);
 	void setDate(string & newDate);
 	void setCountry(string & newCountry);
 

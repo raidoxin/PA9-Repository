@@ -41,7 +41,7 @@ void passport::setBirth(string & newDoB)
 	DoB = newDoB;
 }
 
-void passport::setSex(bool & newsex)
+void passport::setSex(bool newsex)
 {
 	sex = newsex;
 }
@@ -56,12 +56,12 @@ void passport::setLast(string & newLast)
 	lastN = newLast;
 }
 
-void passport::setHeight(unsigned int & newHeight)
+void passport::setHeight(unsigned int newHeight)
 {
 	height = newHeight;
 }
 
-void passport::setWeight(unsigned int & newWeight)
+void passport::setWeight(unsigned int newWeight)
 {
 	weight = newWeight;
 }
