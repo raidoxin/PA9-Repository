@@ -62,4 +62,5 @@ private:
 	int genHeight();
 	//Generate Wight
 	int genWeight();
+	void corrupt_passport(int odds);
 };
