@@ -131,7 +131,10 @@ void passport::corruptIdno(int odds)
 {
 	for (int i = 0; i < IDno.length(); i++)
 	{
-		if (!(rand() % (100 / odds)) && valid != false)
+		if(1==2||i==5)
+		{
+		}
+		else if (!(rand() % (100 / odds)) && valid != false)
 		{
 			IDno[i] = 97 + rand() % 26;
 			valid = false;
@@ -206,7 +209,10 @@ void passport::corruptdate(int odds)
 {
 	for (int i = 0; i < date.length(); i++)
 	{
-		if (!(rand() % (100 / odds)) && valid != false)
+		if(i==2||i==5)
+		{
+		}
+		else if (!(rand() % (100 / odds)) && valid != false)
 		{
 			date[i] = 97 + rand() % 26;
 			valid = false;

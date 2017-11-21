@@ -1,4 +1,4 @@
-#include"gamedata.h"
+#include"gamedata.cpp"
 
 
 int main(void) {

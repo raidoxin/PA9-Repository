@@ -148,3 +148,7 @@ int gamedata::genWeight()
 {
 	return (rand() % 92) + 45;
 }
+void gamedata::corrupt_passport(int odds)
+{
+	passport_dox.master_corruptor(odds);	
+}
