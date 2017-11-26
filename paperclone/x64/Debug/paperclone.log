@@ -1,5 +1,6 @@
 ﻿  gamedata.cpp
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(61): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(140): warning C4552: '-': operator has no effect; expected operator with side-effect
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(168): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   Generating Code...
   Skipping... (no relevant changes detected)
   main.cpp

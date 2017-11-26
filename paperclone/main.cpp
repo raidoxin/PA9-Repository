@@ -1,5 +1,5 @@
-#include"gamedata.cpp"
-
+#include"gamedata.h"
+#include"IDcard.h"
 
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
@@ -8,5 +8,6 @@ int main(void) {
 	test.genchara();
 	test.debugshowdata();
 	system("pause");
+
 	return 0;
 };

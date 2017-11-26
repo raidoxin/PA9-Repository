@@ -33,14 +33,15 @@ gamedata::gamedata() {
 	citystates[1][4] = "The Kube";
 
 	//load the names and orders
-	//
-	populatenamelist(firstnames, (string)"firstnames.txt");
+	populatenamelist(firstnames[0], (string)"firstnamesF.txt");
+	populatenamelist(firstnames[1], (string)"firstnamesM.txt");
 	populatenamelist(lastnames, (string)"lastnames.txt");
 	populatenamelist(missions, (string)"missions.txt");
 
 	//set the day count and lives
 	lives = 3;
 	days = 0;
+	service = 0;
 }
 
 // generates a new character
@@ -48,20 +49,8 @@ gamedata::gamedata() {
 // for now, just makes a passport
 void gamedata::genchara()
 {
-	//this holds a rondom number as needed
-	int rando;
-
-	// passport generation to be combined into a single function later
-	passport_dox.setFirst(getrando(firstnames));
-	passport_dox.setLast(getrando(lastnames));
-	rando = rand() % (NATIONS - 1);
-	passport_dox.setCountry(getnation(rando));
-	passport_dox.setID(genID());
-	passport_dox.setBirth(genBirth());
-	passport_dox.setSex((bool)(rand() % 2));
-	passport_dox.setWeight(genWeight());
-	passport_dox.setHeight(genHeight());
-
+	//Gen Passport and ID card;
+	generateIDcard(generatePassport());
 }
 
 void gamedata::incrementday()
@@ -78,6 +67,7 @@ void gamedata::decrementlives()
 void gamedata::debugshowdata()
 {
 	passport_dox.print_all();
+	IDcard_dox.print_all();
 }
 
 //this populates the gamedata vectors
@@ -128,6 +118,7 @@ string gamedata::genID()
 	return buff;
 }
 //Generates Birthday in a DD-MM-YYYY format
+// Everybody is between 18  and 99 years old
 string gamedata::genBirth()
 {
 	string buff;
@@ -136,6 +127,22 @@ string gamedata::genBirth()
 	buff += std::to_string((rand() % 12) + 1);
 	buff +='-';
 	buff += std::to_string(THECURRENTYEAR - 18 - (rand() % 100));
+	return buff;
+}
+// Generates a valid expiry date that is anywhere between the current day and a year or so in the future
+string gamedata::genExp()
+{
+	string buff;
+	int year = THECURRENTYEAR + (rand() % 2) , month = month = (rand() % 12 + 1), day;
+	if (year > THECURRENTYEAR || month > 1)
+		day = (rand() % 30 + 1);
+	else
+		day - (rand() % 12 + 19);
+	buff += std::to_string(day);
+	buff += '-';
+	buff += std::to_string(month);
+	buff += '-';
+	buff += std::to_string(year);
 	return buff;
 }
 
@@ -151,4 +158,32 @@ int gamedata::genWeight()
 void gamedata::corrupt_passport(int odds)
 {
 	passport_dox.master_corruptor(odds);	
+}
+
+//single function to generate the passport
+int gamedata::generatePassport()
+{
+	//this holds a rondom number as needed
+	int rando;
+	passport_dox.setSex((bool)(rand() % 2));
+	//picks a name from the aprropriately gendered list
+	passport_dox.setFirst(getrando(firstnames[passport_dox.getSex()]));
+	passport_dox.setLast(getrando(lastnames));
+	rando = rand() % (NATIONS - 1);
+	passport_dox.setCountry(getnation(rando));
+	passport_dox.setID(genID());
+	passport_dox.setBirth(genBirth());
+	passport_dox.setWeight(genWeight());
+	passport_dox.setHeight(genHeight());
+	//returns rando for use in generating ID city
+	return rando;
+}
+
+//generates the ID card
+void gamedata::generateIDcard(int country)
+{
+	//copy the relevant bits between items
+	IDcard_dox = passport_dox;
+	IDcard_dox.setexpire(genExp());
+	IDcard_dox.setcity(getcity(country));
 }
