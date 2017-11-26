@@ -113,16 +113,19 @@
   <ItemGroup>
     <ClInclude Include="document.h" />
     <ClInclude Include="gamedata.h" />
+    <ClInclude Include="IDcard.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="document.cpp" />
     <ClCompile Include="gamedata.cpp" />
+    <ClCompile Include="IDcard.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="firstnames.txt" />
+    <Text Include="firstnamesM.txt" />
     <Text Include="lastnames.txt" />
     <Text Include="missions.txt" />
+    <Text Include="FirstnamesF.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,12 +1,15 @@
 #pragma once
 #include"document.h"
+#include"IDcard.h"
 #include<vector>
 #include<fstream>
 
-//Making these defines to kkep track of nation size and number of cities should we change our minds
+//Making these defines to keep track of nation size and number of cities should we change our minds
 #define NATIONS 5
 #define CITIES 4
 #define THECURRENTYEAR 2038
+#define MONTH 1
+#define STARTDAY 19
 
 using std::vector;
 
@@ -29,6 +32,7 @@ public:
 private:
 	//doxx
 	passport passport_dox;
+	IDcard IDcard_dox;
 
 	//this array holds the nations on the first row
 	// and the corresponding cities in the following rows in the coresponding column
@@ -36,14 +40,15 @@ private:
 	string citystates[CITIES + 1][NATIONS];
 
 	//these vectors hold the names used for generation
-	//vectors are used so if we want to add names, we won;t have to hardcode it all
-	vector <string> firstnames;
+	//vectors are used so if we want to add names, we won't have to hardcode it all
+	vector <string> firstnames[2];
 	vector <string> lastnames;
 	vector <string> missions;
-
-
+	
+	//Basic Game Variables
 	unsigned int lives;
 	unsigned int days;
+	unsigned int service;
 
 	//private functions
 
@@ -58,9 +63,16 @@ private:
 	string genID();
 	//Generates a Birthday;
 	string genBirth();
+	//Generates an Expiry Date
+	string genExp();
 	//Generate Height
 	int genHeight();
-	//Generate Wight
+	//Generate Weight
 	int genWeight();
 	void corrupt_passport(int odds);
+
+	//Document Generation Functions
+	//To be invoked within The  character GEneration Function
+	int generatePassport();
+	void generateIDcard(int country);
 };
