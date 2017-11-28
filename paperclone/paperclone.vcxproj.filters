@@ -24,6 +24,12 @@
     <ClInclude Include="IDcard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="visa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="orders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="document.cpp">
@@ -38,6 +44,12 @@
     <ClCompile Include="IDcard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="visa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="orders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="lastnames.txt">
@@ -50,6 +62,9 @@
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="FirstnamesF.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="visas.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
