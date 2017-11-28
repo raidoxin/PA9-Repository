@@ -1,17 +1,13 @@
-#include"document.h"
 #include"gamedata.h"
-
+#include"IDcard.h"
 
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
-	passport test;
-	gamedata testo;
-	//testy->setCountry((std::string)"SAoVQ");
-	testo.genchara();
-	test.print_all();
-	test.master_corruptor(1);
-	test.print_all();
-
+	gamedata test;
+	test.debugshowdata();
+	test.genchara();
+	test.debugshowdata();
 	system("pause");
+
 	return 0;
 };

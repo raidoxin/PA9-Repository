@@ -41,7 +41,7 @@ void passport::setBirth(string & newDoB)
 	DoB = newDoB;
 }
 
-void passport::setSex(bool & newsex)
+void passport::setSex(bool newsex)
 {
 	sex = newsex;
 }
@@ -56,12 +56,12 @@ void passport::setLast(string & newLast)
 	lastN = newLast;
 }
 
-void passport::setHeight(unsigned int & newHeight)
+void passport::setHeight(unsigned int newHeight)
 {
 	height = newHeight;
 }
 
-void passport::setWeight(unsigned int & newWeight)
+void passport::setWeight(unsigned int newWeight)
 {
 	weight = newWeight;
 }
@@ -131,7 +131,10 @@ void passport::corruptIdno(int odds)
 {
 	for (int i = 0; i < IDno.length(); i++)
 	{
-		if (!(rand() % (100 / odds)) && valid != false)
+		if(1==2||i==5)
+		{
+		}
+		else if (!(rand() % (100 / odds)) && valid != false)
 		{
 			IDno[i] = 97 + rand() % 26;
 			valid = false;
@@ -206,7 +209,10 @@ void passport::corruptdate(int odds)
 {
 	for (int i = 0; i < date.length(); i++)
 	{
-		if (!(rand() % (100 / odds)) && valid != false)
+		if(i==2||i==5)
+		{
+		}
+		else if (!(rand() % (100 / odds)) && valid != false)
 		{
 			date[i] = 97 + rand() % 26;
 			valid = false;
@@ -260,4 +266,99 @@ void passport::print_all()
 	std::cout << weight << endl;
 	std::cout << date << endl;
 	std::cout << country << endl << endl;
+}
+void gamedata::draw()
+{
+	sf::Font normal
+	sf::Font bold
+		
+}
+void passport::draw(sf::Window window)
+{
+	sf::Font normal;
+	sf::Font bold;
+	if(!normal.loadfromFile("DejaVuSansMono.ttf") && !bold.loadfromFile("DejaVuSansMono-Bold.ttf"));
+	{
+		std::cout<<"Error loading fonts"<<sdt::endl;
+	}
+	sf::Text static_info_IDno("ID: ",bold,30); // says id is bold,30 pixels
+	sf::Text static_info_DOB("DOB: ",bold,30); //These are constants for all id
+	sf::Text static_info_SEX("SEX: ",bold,30);
+	sf::Text static_info_FIRST("FIRST: ",bold,30);
+	sf::Text static_info_LAST("LAST: ",bold,30);
+	sf::Text static_info_HEIGHT("HEIGHT: ",bold,30);
+	sf::Text static_info_WEIGHT("WEIGHT: ",bold,30);
+	sf::Text static_info_EXPD("EXP DATE: ",bold,30);
+	sf::Text static_info_COUNTRY("COUNTRY: ",bold,30); //need to set position
+	
+	
+	static_info_IDno.setPosition();
+	static_info_DOB.setPosition();
+	static_info_SEX.setPosition();
+	static_info_FIRST.setPosition();
+	static_info_LAST.setPosition();
+	static_info_HEIGHT.setPosition();
+	static_info_WEIGHT.setPosition();
+	static_info_EXPD.setPosition();
+	static_info_COUNTRY.setPosition();
+	
+	sf::Text IDno_draw;
+	sf::Text DOB_draw;
+	sf::Text sex_draw;
+	sf::Text firstN_draw;
+	sf::Text lastN_draw;
+	sf::Text height_draw;
+	sf::Text weight_draw;
+	sf::Text date_draw;
+	sf::Text country_draw;
+	
+	IDno_draw.setFont(normal);
+	DOB_draw.setFont(normal);
+	sex_draw.setFont(normal);
+	firstN_draw.setFont(normal);
+	lastN_draw.setFont(normal);
+	height_draw.setFont(normal);
+	weight_draw.setFont(normal);
+	date_draw.setFont(normal);
+	coutry_draw.setFont(normal);
+		
+	IDno_draw.setPosition();
+	DOB_draw.setPosition();
+	sex_draw.setPosition();
+	firstN_draw.setPosition();
+	lastN_draw.setPosition();
+	height_draw.setPosition();
+	weight_draw.setPosition();
+	date_draw.setPosition();
+	coutry_draw.setPosition();
+	
+	IDno_draw.setCharacterSize(25);
+	DOB_draw.setCharacterSize(25);
+	sex_draw.setCharacterSize(25);
+	firstN_draw.setCharacterSize(25);
+	lastN_draw.setCharacterSize(25);
+	height_draw.setCharacterSize(25);
+	weight_draw.setCharacterSize(25);
+	date_draw.setCharacterSize(25);
+	coutry_draw.setCharacterSize(25);
+		
+	IDno_draw.setString(IDno);
+	DOB_draw.setString(DOB);
+	sex_draw.setString(sex);
+	firstN_draw.setString(firstN);
+	lastN_draw.setString(lastN);
+	height_draw.setString(height);
+	weight_draw.setString(weight);
+	date_draw.setString(date);
+	coutry_draw.setString(country);
+		
+	window.draw(IDno_draw);
+	window.draw(DOB_draw);
+	window.draw(sex_draw);
+	window.draw(firstN_draw);
+	window.draw(lastN_draw);
+	window.draw(height_draw);
+	window.draw(weight_draw);
+	window.draw(date_draw);
+	window.draw(coutry_draw);
 }
