@@ -21,5 +21,9 @@ public:
 	void print_all();
 
 	visa & operator=(passport & copied);
+	void corrupt_destination_Country(int odds);
+	void corrupt_destination_City(int odds);
+	void corrupt_visatype(int odds);
+	void visa_mastercorrupt(int odds);
 
 };

@@ -37,3 +37,33 @@ orders & orders::operator=(visa & thevisa)
 	thevisa.setVisaType((string)"Military");
 	return *this;
 }
+void orders::corrupt_mission(int odds)
+{
+	for (int i = 0; i < mission.length(); i++)
+	{
+		if (!(rand() % (100 / odds)) && valid != false)
+		{
+			mission[i] = 97 + rand() % 26;
+			valid = false;
+		}
+
+	}
+}
+void orders::corrupt_validdate(int odds)
+{
+	for (int i = 0; i < validdate.length(); i++)
+	{
+		if (!(rand() % (100 / odds)) && valid != false && i != 2 && i != 5)
+		{
+			validdate[i] = 97 + rand() % 26;
+			valid = false;
+		}
+
+	}
+}
+void orders::orders_mastercorrupt(int odds)
+{
+	orders::corrupt_validdate(odds);
+	orders::corrupt_mission(odds);
+
+}
