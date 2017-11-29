@@ -113,6 +113,8 @@
   <ItemGroup>
     <ClInclude Include="document.h" />
     <ClInclude Include="gamedata.h" />
+    <ClInclude Include="orders.h" />
+    <ClInclude Include="visa.h" />
     <ClInclude Include="IDcard.h" />
   </ItemGroup>
   <ItemGroup>
@@ -120,12 +122,15 @@
     <ClCompile Include="gamedata.cpp" />
     <ClCompile Include="IDcard.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="orders.cpp" />
+    <ClCompile Include="visa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="firstnamesM.txt" />
     <Text Include="lastnames.txt" />
     <Text Include="missions.txt" />
     <Text Include="FirstnamesF.txt" />
+    <Text Include="visas.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,8 @@
 ﻿  gamedata.cpp
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(140): warning C4552: '-': operator has no effect; expected operator with side-effect
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(168): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(160): warning C4552: '-': operator has no effect; expected operator with side-effect
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(177): warning C4305: 'argument': truncation from 'int' to 'char'
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(177): warning C4309: 'argument': truncation of constant value
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(201): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   Generating Code...
   Skipping... (no relevant changes detected)
   main.cpp

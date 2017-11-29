@@ -1,6 +1,8 @@
 #pragma once
 #include"document.h"
 #include"IDcard.h"
+#include"visa.h"
+#include"orders.h"
 #include<vector>
 #include<fstream>
 
@@ -33,6 +35,8 @@ private:
 	//doxx
 	passport passport_dox;
 	IDcard IDcard_dox;
+	visa visa_dox;
+	orders orders_dox;
 
 	//this array holds the nations on the first row
 	// and the corresponding cities in the following rows in the coresponding column
@@ -43,6 +47,7 @@ private:
 	//vectors are used so if we want to add names, we won't have to hardcode it all
 	vector <string> firstnames[2];
 	vector <string> lastnames;
+	vector <string> visareasons;
 	vector <string> missions;
 	
 	//Basic Game Variables
@@ -57,6 +62,7 @@ private:
 	//these get a nation based on the number provided
 	string & getnation(int & rand);
 	string & getcity(int & nation);
+	int getdestnation(int & homenation);
 	//this gets a random string form the specified vector
 	string & getrando(vector <string> & spec);
 	//Generates a 9 digit ID Number
@@ -65,6 +71,8 @@ private:
 	string genBirth();
 	//Generates an Expiry Date
 	string genExp();
+	//Generates the current day
+	string genCurrentDay();
 	//Generate Height
 	int genHeight();
 	//Generate Weight
@@ -75,4 +83,6 @@ private:
 	//To be invoked within The  character GEneration Function
 	int generatePassport();
 	void generateIDcard(int country);
+	void generateVisa(int homenation);
+	void generateOrders();
 };

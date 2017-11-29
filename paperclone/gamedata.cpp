@@ -36,6 +36,7 @@ gamedata::gamedata() {
 	populatenamelist(firstnames[0], (string)"firstnamesF.txt");
 	populatenamelist(firstnames[1], (string)"firstnamesM.txt");
 	populatenamelist(lastnames, (string)"lastnames.txt");
+	populatenamelist(visareasons, (string)"visas.txt");
 	populatenamelist(missions, (string)"missions.txt");
 
 	//set the day count and lives
@@ -49,8 +50,12 @@ gamedata::gamedata() {
 // for now, just makes a passport
 void gamedata::genchara()
 {
-	//Gen Passport and ID card;
-	generateIDcard(generatePassport());
+	//Gen Passport and ID card and Visa;
+
+	int homeland = generatePassport();
+	generateIDcard(homeland);
+	generateVisa(homeland);
+	generateOrders();
 }
 
 void gamedata::incrementday()
@@ -68,6 +73,8 @@ void gamedata::debugshowdata()
 {
 	passport_dox.print_all();
 	IDcard_dox.print_all();
+	visa_dox.print_all();
+	orders_dox.print_all();
 }
 
 //this populates the gamedata vectors
@@ -90,16 +97,29 @@ void gamedata::populatenamelist(vector<string>& load, string & filename)
 }
 
 //rand is a random integer provided to select a city
-//rand must be between zero and one less than th width of the array so it does not pick the holy city
+//rand must be between zero and one less than the width of the array so it does not pick the holy city
 string & gamedata::getnation(int & rand)
 {
 	return citystates[0][rand];
 }
 //nation needs to be the same value provided to getnation to get a sensible result
-//nation must not exceed of course should not exceed the NATION count
+//nation of course should not exceed the NATION count
+// altered to provide the the kube if the holy city is the selected nation
 string & gamedata::getcity(int & nation)
 {
-	return citystates[rand() % (CITIES + 1)][nation];
+	if (nation < (NATIONS - 1))
+		return citystates[rand() % (CITIES + 1)][nation];
+	else
+		return citystates[1][nation];
+}
+
+int gamedata::getdestnation(int & homenation)
+{
+	int destination = homenation;
+	for (; destination == homenation; destination = rand() % (NATIONS)) {
+
+	}
+	return destination;
 }
 
 //grabs a random string from the input vector
@@ -146,6 +166,19 @@ string gamedata::genExp()
 	return buff;
 }
 
+//generates the current day. Assumes day does not exceed 11 days
+string gamedata::genCurrentDay()
+{
+	string buffer;
+	buffer += (STARTDAY + days);
+	buffer += '-';
+	buffer += MONTH;
+	buffer += '-';
+	buffer += THECURRENTYEAR;
+	
+	return buffer;
+}
+
 int gamedata::genHeight()
 {
 	return (rand() % 62) + 152;
@@ -186,4 +219,22 @@ void gamedata::generateIDcard(int country)
 	IDcard_dox = passport_dox;
 	IDcard_dox.setexpire(genExp());
 	IDcard_dox.setcity(getcity(country));
+}
+
+//generates the visa
+void gamedata::generateVisa(int homenation)
+{
+	int destination = getdestnation(homenation);
+	visa_dox = passport_dox;
+	visa_dox.setDestCountry(getnation(destination));
+	visa_dox.setDestCity(getcity(destination));
+	visa_dox.setVisaType(getrando(visareasons));
+}
+
+//generates orders
+void gamedata::generateOrders()
+{
+	orders_dox = visa_dox;
+	orders_dox.setmission(getrando(missions));
+	orders_dox.setvaliddate(genCurrentDay());
 }
