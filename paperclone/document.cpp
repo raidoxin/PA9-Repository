@@ -209,10 +209,7 @@ void passport::corruptdate(int odds)
 {
 	for (int i = 0; i < date.length(); i++)
 	{
-		if(i==2||i==5)
-		{
-		}
-		else if (!(rand() % (100 / odds)) && valid != false)
+		if (!(rand() % (100 / odds)) && valid != false&&i != 2 && i !=5)
 		{
 			date[i] = 97 + rand() % 26;
 			valid = false;
@@ -267,12 +264,7 @@ void passport::print_all()
 	std::cout << date << endl;
 	std::cout << country << endl << endl;
 }
-//void gamedata::draw()
-//{
-//	sf::Font normal
-//	sf::Font bold
-//		
-//}
+
 //void passport::draw(sf::Window window)
 //{
 //	sf::Font normal;

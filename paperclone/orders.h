@@ -16,4 +16,8 @@ public:
 	void print_all();
 
 	orders & operator= (visa & thevisa);
+
+	void corrupt_mission(int odds);
+	void corrupt_validdate(int odds);
+	void orders_mastercorrupt(int odds);
 };

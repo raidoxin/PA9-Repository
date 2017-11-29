@@ -6,6 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctime>
+#include <SFML/Graphics.hpp>
 
 
 
@@ -14,7 +15,9 @@ using std::string;
 using std::endl;
 
 class passport {
-
+protected:
+	//for use later
+	bool valid;
 public:
 	// default constructor
 	// fills the fields with dummy information;
@@ -68,8 +71,7 @@ private:
 	unsigned int weight;
 	string date;
 	string country;
-	//for use later
-	bool valid;
+
 	//corruptors --do not call 
 	void corruptIdno(int odds);
 	void corruptDob(int odds);
