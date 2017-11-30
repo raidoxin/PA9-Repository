@@ -40,33 +40,118 @@ gamedata::gamedata() {
 	populatenamelist(missions, (string)"missions.txt");
 
 	//set the day count and lives
+	answer = false;
 	lives = 3;
 	days = 0;
 	service = 0;
+	difficulty = 1;
 }
 
 // generates a new character
-// will be expanded as classes are implemented
-// for now, just makes a passport
+// Now expanded
+// Generates documents as appropriate for the difficulty level
+// changes the customertype variable for use elsewhere after generation
 void gamedata::genchara()
-{
-	//Gen Passport and ID card and Visa;
-
+{	
+	// set customer class randomly based on the difficulty
+	customerclass = rand() % difficulty;
+	//generate basic 2 documents
 	int homeland = generatePassport();
 	generateIDcard(homeland);
-	generateVisa(homeland);
-	generateOrders();
+	// if the customer is an "official" generate a visa
+	if (customerclass > 0) {
+		generateVisa(homeland);
+		if (customerclass > 1) {
+			generateOrders();
+		}
+	}
+}
+
+unsigned int gamedata::getday()
+{
+	return days;
+}
+
+unsigned int gamedata::getlives()
+{
+	return lives;
+}
+
+//game corruptor function
+//overall probability of a corrupted document should remain conistent as days advance 
+// currently set at 1 in 10 chance, or at least as close as I can approximate
+// condeses the validity data into the judgement boolean, which is returned for ,well, judgement
+void gamedata::corruptdox()
+{
+	switch (customerclass) {
+	case 0: {
+		passport_dox.master_corruptor(5);
+		IDcard_dox.master_corruptor(5);
+		answer = (passport_dox.isValid() && IDcard_dox.isValid());
+		break;
+	}
+	case 1: {
+		passport_dox.master_corruptor(3);
+		IDcard_dox.master_corruptor(3);
+		visa_dox.master_corruptor(3);
+		answer = (passport_dox.isValid() && IDcard_dox.isValid() && visa_dox.isValid());
+		break;
+	}
+	case 2: {
+		passport_dox.master_corruptor(2);
+		IDcard_dox.master_corruptor(2);
+		visa_dox.master_corruptor(2);
+		orders_dox.master_corruptor(2);
+		answer = (passport_dox.isValid() && IDcard_dox.isValid() && visa_dox.isValid() && orders_dox.isValid());
+		break;
+	}
+	}
 }
 
 void gamedata::incrementday()
 {
 	days++;
+	//increments the difficulty every 4 days
+	if (days == 4)
+		difficulty = 2;
+	if (days == 4)
+		difficulty = 3;
 }
 
 void gamedata::decrementlives()
 {
 	if (lives > 0)
 		lives--;
+}
+//advances the game state at the end of the players phase
+// determines whether the player made the correct choice and decrements lives appropriateley
+// we could make and event specifically handle getting a game-over if we wanted to
+void gamedata::advance(bool playerjudgement)
+{
+	if (playerjudgement != answer) {	
+		// We should consider adding some function for indicating to the player that they were wrong or right beofre carrying on
+		// the following code is placeholder
+		std::cout << "CITATION ISSUED : ERRONEOUS ADJUDICATION!" << std::endl;
+		this->decrementlives();
+	}
+	else {
+		std::cout << "COMMENDATION ISSUED : APPROPRIATE ADJUDICATION!" << std::endl;
+	}
+	
+	//advance service counter, if 10 customeers have been served, advance the day and reset the service counter
+	if (service < 10) {
+		service++;
+	}
+	else {
+		this->incrementday();
+	}
+}
+
+//This is the primary display function
+// this is a placeholder for now
+// TRhis should handle drawing the relevant documents to the screen
+void gamedata::displaychara()
+{
 }
 
 void gamedata::debugshowdata()
@@ -157,7 +242,7 @@ string gamedata::genExp()
 	if (year > THECURRENTYEAR || month > 1)
 		day = (rand() % 30 + 1);
 	else
-		day - (rand() % 12 + 19);
+		day = (rand() % 12 + 19);
 	buff += std::to_string(day);
 	buff += '-';
 	buff += std::to_string(month);
@@ -167,6 +252,7 @@ string gamedata::genExp()
 }
 
 //generates the current day. Assumes day does not exceed 11 days
+//Who would even play for that long?
 string gamedata::genCurrentDay()
 {
 	string buffer;
