@@ -23,12 +23,22 @@ class gamedata {
 public:
 	//constructor initializes gamedata
 	gamedata();
+
+	// character generator
 	void genchara();
 
+	//getters
+	unsigned int getday();
+	unsigned int getlives();
+
+	//gameplay functions
+	void corruptdox();
 	void incrementday();
 	void decrementlives();
+	void advance(bool playerjudgement);
 
-
+	// display functions
+	void displaychara();
 	void debugshowdata();
 
 private:
@@ -54,6 +64,9 @@ private:
 	unsigned int lives;
 	unsigned int days;
 	unsigned int service;
+	unsigned int difficulty;
+	unsigned int customerclass;
+	bool answer;
 
 	//private functions
 

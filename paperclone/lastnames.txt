@@ -8,3 +8,6 @@ Taylor
 Davis
 White
 Clark
+Yamada
+Tanaka
+Davis

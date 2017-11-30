@@ -84,6 +84,7 @@ void visa::corrupt_visatype(int odds)
 
 	}
 }
+/*
 void visa_mastercorrupt(int odds)
 {
 	visa::corrupt_destination_City(odds);
@@ -91,3 +92,4 @@ void visa_mastercorrupt(int odds)
 	visa::corrupt_visatype(odds);
 
 }
+*/
