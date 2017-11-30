@@ -85,23 +85,23 @@ void gamedata::corruptdox()
 {
 	switch (customerclass) {
 	case 0: {
-		passport_dox.master_corruptor(5);
-		IDcard_dox.master_corruptor(5);
+		passport_dox.master_corruptor(1);
+		IDcard_dox.master_corruptor(1);
 		answer = (passport_dox.isValid() && IDcard_dox.isValid());
 		break;
 	}
 	case 1: {
-		passport_dox.master_corruptor(3);
-		IDcard_dox.master_corruptor(3);
-		visa_dox.master_corruptor(3);
+		passport_dox.master_corruptor(1);
+		IDcard_dox.master_corruptor(1);
+		visa_dox.master_corruptor(1);
 		answer = (passport_dox.isValid() && IDcard_dox.isValid() && visa_dox.isValid());
 		break;
 	}
 	case 2: {
-		passport_dox.master_corruptor(2);
-		IDcard_dox.master_corruptor(2);
-		visa_dox.master_corruptor(2);
-		orders_dox.master_corruptor(2);
+		passport_dox.master_corruptor(1);
+		IDcard_dox.master_corruptor(1);
+		visa_dox.master_corruptor(1);
+		orders_dox.master_corruptor(1);
 		answer = (passport_dox.isValid() && IDcard_dox.isValid() && visa_dox.isValid() && orders_dox.isValid());
 		break;
 	}
