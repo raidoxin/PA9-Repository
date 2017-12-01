@@ -4,6 +4,7 @@
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
 	gamedata data;
+	sf::Window window(sf::VideoMode(1280,800),"Paps Plz");
 	sf::Event event;
 	sf::Keyboard keyboard
 	//Okay, we're doing the game logic in  main
@@ -30,6 +31,8 @@ int main(void) {
 		}
 		if(window.pollEvent(event) == sf::Event::Closed)
 		{
+			window.close();
+			std::cout <<"Window was closed"<<std::endl;
 			break;					      
 		}
 	}
