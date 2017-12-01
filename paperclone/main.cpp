@@ -6,7 +6,7 @@ int main(void) {
 	gamedata data;
 	sf::Window window(sf::VideoMode(1280,800),"Paps Plz");
 	sf::Event event;
-	sf::Keyboard keyboard
+	sf::Keyboard keyboard;
 	//Okay, we're doing the game logic in  main
 	// We'll seee how long I keep that up
 	//gameplay loop runs until playerfinishes the month or loses all lives;
@@ -15,6 +15,7 @@ int main(void) {
 		data.genchara();
 		//placeholder for actually displaying to the screen
 		data.debugshowdata();
+		data.drawchara(window);
 		//get user input for judging the documents
 		//replace with events once that's figured
 		//for now a basic input loop
