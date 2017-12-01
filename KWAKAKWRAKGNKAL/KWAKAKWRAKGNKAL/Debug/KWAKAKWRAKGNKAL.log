@@ -1,0 +1,13 @@
+﻿  main.cpp
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\main.cpp(5): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\main.cpp(12): warning C4101: 'keyboard': unreferenced local variable
+  document.cpp
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(132): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(147): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(167): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(179): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(210): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(223): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  KWAKAKWRAKGNKAL.vcxproj -> c:\users\nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Debug\KWAKAKWRAKGNKAL.exe
+  KWAKAKWRAKGNKAL.vcxproj -> c:\users\nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Debug\KWAKAKWRAKGNKAL.pdb (Full PDB)
