@@ -295,15 +295,15 @@ void passport::draw(sf::RenderWindow & window)
 	sf::Text static_info_COUNTRY("COUNTRY: ", bold, 30); //need to set position
 														 //	
 														 //	
-	static_info_IDno.setPosition(100, 10);
-	static_info_DOB.setPosition(100, 15);
-	static_info_SEX.setPosition(100, 20);
-	static_info_FIRST.setPosition(100, 25);
-	static_info_LAST.setPosition(100, 30);
-	static_info_HEIGHT.setPosition(100, 35);
-	static_info_WEIGHT.setPosition(100, 40);
-	static_info_EXPD.setPosition(100, 45);
-	static_info_COUNTRY.setPosition(100, 50);
+	static_info_IDno.setPosition(200, 50);
+	static_info_DOB.setPosition(200, 100);
+	static_info_SEX.setPosition(200, 150);
+	static_info_FIRST.setPosition(200, 200);
+	static_info_LAST.setPosition(200, 250);
+	static_info_HEIGHT.setPosition(200, 300);
+	static_info_WEIGHT.setPosition(200, 350);
+	static_info_EXPD.setPosition(200, 400);
+	static_info_COUNTRY.setPosition(200, 450);
 	//	
 	sf::Text IDno_draw;
 	sf::Text DOB_draw;
@@ -324,17 +324,18 @@ void passport::draw(sf::RenderWindow & window)
 	height_draw.setFont(normal);
 	weight_draw.setFont(normal);
 	date_draw.setFont(normal);
-	//	coutry_draw.setFont(normal);
+	country_draw.setFont(normal);
 	//		
-	IDno_draw.setPosition(200, 10);
-	DOB_draw.setPosition(200, 15);
-	sex_draw.setPosition(200, 20);
-	firstN_draw.setPosition(200, 25);
-	lastN_draw.setPosition(200, 30);
-	height_draw.setPosition(200, 35);
-	weight_draw.setPosition(200, 45);
-	date_draw.setPosition(200, 50);
-	//coutry_draw.setPosition();
+	
+	IDno_draw.setPosition(500, 50);
+	DOB_draw.setPosition(500, 100);
+	sex_draw.setPosition(500, 150);
+	firstN_draw.setPosition(500, 200);
+	lastN_draw.setPosition(500, 250);
+	height_draw.setPosition(500, 300);
+	weight_draw.setPosition(500, 350);
+	date_draw.setPosition(500, 400);
+	country_draw.setPosition(500,450);
 	//	
 	IDno_draw.setCharacterSize(25);
 	DOB_draw.setCharacterSize(25);
@@ -344,7 +345,7 @@ void passport::draw(sf::RenderWindow & window)
 	height_draw.setCharacterSize(25);
 	weight_draw.setCharacterSize(25);
 	date_draw.setCharacterSize(25);
-	//coutry_draw.setCharacterSize(25);
+	country_draw.setCharacterSize(25);
 	//		
 	IDno_draw.setString(IDno);
 	DOB_draw.setString(DoB);
@@ -362,8 +363,18 @@ void passport::draw(sf::RenderWindow & window)
 	height_draw.setString(height);
 	weight_draw.setString(weight);
 	date_draw.setString(date);
-	//coutry_draw.setString(country);
+	country_draw.setString(country);
 	//		
+	window.draw(static_info_IDno); // says id is bold,30 pixels
+	window.draw(static_info_DOB); //These are constants for all id
+	window.draw(static_info_SEX);
+	window.draw(static_info_FIRST);
+	window.draw(static_info_LAST);
+	window.draw(static_info_HEIGHT);
+	window.draw(static_info_WEIGHT);
+	window.draw(static_info_EXPD);
+	window.draw(static_info_COUNTRY);
+	
 	window.draw(IDno_draw);
 	window.draw(DOB_draw);
 	window.draw(sex_draw);
@@ -372,7 +383,7 @@ void passport::draw(sf::RenderWindow & window)
 	window.draw(height_draw);
 	window.draw(weight_draw);
 	window.draw(date_draw);
-	//window.draw(coutry_draw);
+	window.draw(country_draw);
 	
 }
 
