@@ -283,7 +283,7 @@ void passport::draw(sf::RenderWindow & window)
 		//Error
 	}
 
-	sf::RectangleShape card(sf::Vector2f(200, 130));
+	sf::RectangleShape card(sf::Vector2f(700, 500));
 	sf::Text static_info_IDno("ID: ", bold, 30); // says id is bold,30 pixels
 	sf::Text static_info_DOB("DOB: ", bold, 30); //These are constants for all id
 	sf::Text static_info_SEX("SEX: ", bold, 30);
@@ -304,6 +304,8 @@ void passport::draw(sf::RenderWindow & window)
 	static_info_WEIGHT.setPosition(200, 350);
 	static_info_EXPD.setPosition(200, 400);
 	static_info_COUNTRY.setPosition(200, 450);
+	card.setFillColor(sf::Color::Red);
+	card.setPosition(170, 20);
 	//	
 	sf::Text IDno_draw;
 	sf::Text DOB_draw;
@@ -327,15 +329,15 @@ void passport::draw(sf::RenderWindow & window)
 	country_draw.setFont(normal);
 	//		
 	
-	IDno_draw.setPosition(500, 50);
-	DOB_draw.setPosition(500, 100);
-	sex_draw.setPosition(500, 150);
-	firstN_draw.setPosition(500, 200);
-	lastN_draw.setPosition(500, 250);
-	height_draw.setPosition(500, 300);
-	weight_draw.setPosition(500, 350);
-	date_draw.setPosition(500, 400);
-	country_draw.setPosition(500,450);
+	IDno_draw.setPosition(700, 50);
+	DOB_draw.setPosition(700, 100);
+	sex_draw.setPosition(700, 150);
+	firstN_draw.setPosition(700, 200);
+	lastN_draw.setPosition(700, 250);
+	height_draw.setPosition(700, 300);
+	weight_draw.setPosition(700, 350);
+	date_draw.setPosition(700, 400);
+	country_draw.setPosition(700,450);
 	//	
 	IDno_draw.setCharacterSize(25);
 	DOB_draw.setCharacterSize(25);
@@ -360,11 +362,12 @@ void passport::draw(sf::RenderWindow & window)
 	sex_draw.setString(sex_str);
 	firstN_draw.setString(firstN);
 	lastN_draw.setString(lastN);
-	height_draw.setString(height);
-	weight_draw.setString(weight);
+	height_draw.setString(std::to_string(height));
+	weight_draw.setString(std::to_string(weight));
 	date_draw.setString(date);
 	country_draw.setString(country);
 	//		
+	window.draw(card);
 	window.draw(static_info_IDno); // says id is bold,30 pixels
 	window.draw(static_info_DOB); //These are constants for all id
 	window.draw(static_info_SEX);
@@ -384,6 +387,7 @@ void passport::draw(sf::RenderWindow & window)
 	window.draw(weight_draw);
 	window.draw(date_draw);
 	window.draw(country_draw);
+	
 	
 }
 

@@ -1,0 +1,27 @@
+﻿  document.cpp
+document.cpp(132): warning C4018: '<': signed/unsigned mismatch
+document.cpp(147): warning C4018: '<': signed/unsigned mismatch
+document.cpp(167): warning C4018: '<': signed/unsigned mismatch
+document.cpp(179): warning C4018: '<': signed/unsigned mismatch
+document.cpp(210): warning C4018: '<': signed/unsigned mismatch
+document.cpp(223): warning C4018: '<': signed/unsigned mismatch
+  gamedata.cpp
+gamedata.cpp(269): warning C4305: 'argument': truncation from 'int' to 'char'
+gamedata.cpp(269): warning C4309: 'argument': truncation of constant value
+gamedata.cpp(293): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  IDcard.cpp
+  main.cpp
+main.cpp(5): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+main.cpp(18): warning C4101: 'keyboard': unreferenced local variable
+  orders.cpp
+orders.cpp(42): warning C4018: '<': signed/unsigned mismatch
+orders.cpp(54): warning C4018: '<': signed/unsigned mismatch
+  visa.cpp
+visa.cpp(53): warning C4018: '<': signed/unsigned mismatch
+visa.cpp(65): warning C4018: '<': signed/unsigned mismatch
+visa.cpp(77): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  All 341 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  KWAKAKWRAKGNKAL.vcxproj -> C:\Users\Nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Release\KWAKAKWRAKGNKAL.exe
+  KWAKAKWRAKGNKAL.vcxproj -> C:\Users\Nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Release\KWAKAKWRAKGNKAL.pdb (Full PDB)

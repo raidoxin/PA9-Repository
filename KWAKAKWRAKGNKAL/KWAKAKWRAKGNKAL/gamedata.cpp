@@ -153,8 +153,8 @@ void gamedata::advance(bool playerjudgement)
 
 void gamedata::displaychara(sf::RenderWindow & window)
 {
-	passport_dox.draw(window);
 	IDcard_dox.draw(window);
+	passport_dox.draw(window);
 	visa_dox.draw(window);
 	orders_dox.draw(window);
 }

@@ -41,8 +41,6 @@ public:
 	void displaychara(sf::RenderWindow & window);
 	void debugshowdata();
 
-	//gets sex for main drawing
-	bool get_sex();
 
 private:
 	//doxx
