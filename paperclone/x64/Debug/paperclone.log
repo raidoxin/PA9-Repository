@@ -1,9 +1,37 @@
-﻿  gamedata.cpp
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(263): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(263): warning C4309: 'argument': truncation of constant value
-c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(287): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+﻿  main.cpp
+c:\users\cool user\source\repos\pa9-repository\paperclone\main.cpp(41): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\cool user\source\repos\pa9-repository\paperclone\main.cpp(60): error C2280: 'sf::Window::Window(const sf::Window &)': attempting to reference a deleted function
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\window\window.hpp(530): note: compiler has generated 'sf::Window::Window' here
+  gamedata.cpp
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(155): error C2280: 'sf::Window::Window(const sf::Window &)': attempting to reference a deleted function
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\window\window.hpp(530): note: compiler has generated 'sf::Window::Window' here
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(267): warning C4305: 'argument': truncation from 'int' to 'char'
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(267): warning C4309: 'argument': truncation of constant value
+c:\users\cool user\source\repos\pa9-repository\paperclone\gamedata.cpp(291): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  document.cpp
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(356): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(357): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(358): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(359): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(360): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(361): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(362): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(363): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(364): error C2039: 'draw': is not a member of 'sf::Window'
+  c:\users\cool user\documents\libraries\sfml-2.4.2\include\sfml\graphics\texture.hpp(38): note: see declaration of 'sf::Window'
+c:\users\cool user\source\repos\pa9-repository\paperclone\document.cpp(280): warning C4390: ';': empty controlled statement found; is this the intent?
+  Generating Code...
+  Compiling...
+  IDcard.cpp
   Generating Code...
   Skipping... (no relevant changes detected)
-  main.cpp
-  paperclone.vcxproj -> C:\Users\COOL USER\Source\Repos\PA9-Repository\x64\Debug\paperclone.exe
-  paperclone.vcxproj -> C:\Users\COOL USER\Source\Repos\PA9-Repository\x64\Debug\paperclone.pdb (Partial PDB)
+  visa.cpp
+  orders.cpp

@@ -260,11 +260,11 @@ string gamedata::genExp()
 string gamedata::genCurrentDay()
 {
 	string buffer;
-	buffer += (STARTDAY + days);
+	buffer +=  std::to_string(STARTDAY + days);
 	buffer += '-';
-	buffer += MONTH;
+	buffer += std::to_string(MONTH);
 	buffer += '-';
-	buffer += THECURRENTYEAR;
+	buffer += std::to_string(THECURRENTYEAR);
 	
 	return buffer;
 }

@@ -57,7 +57,7 @@ public:
 	//master corruptor
 	void master_corruptor(int odds); //odds act as percentage chance
 	
-	//void draw(sf::Window window);
+	void draw(sf::Window window);
 
 private:
 	string IDno;
@@ -82,5 +82,7 @@ private:
 	void corruptweight(int odds);
 	void corruptdate(int odds);
 	void corruptcountry(int odds);
+
+	string tellsex();
 
 };

@@ -38,7 +38,7 @@ public:
 	void advance(bool playerjudgement);
 
 	// display functions
-	void displaychara();
+	void displaychara(sf::Window window);
 	void debugshowdata();
 
 private:
