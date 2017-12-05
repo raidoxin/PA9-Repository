@@ -40,7 +40,7 @@ void manage(void)
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
 	gamedata data;
-	sf::Window window(sf::VideoMode(1280,800),"Papes Pls");
+	sf::RenderWindow window(sf::VideoMode(1280,800),"Papes Pls");
 	sf::Event event;
 	sf::Keyboard keyboard;
 	

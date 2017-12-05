@@ -57,7 +57,7 @@ public:
 	//master corruptor
 	void master_corruptor(int odds); //odds act as percentage chance
 	
-	void draw(sf::Window window);
+	void draw(sf::RenderWindow & window);
 
 private:
 	string IDno;

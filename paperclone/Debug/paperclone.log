@@ -1,2 +1,5 @@
-﻿  gamedata.cpp
-  paperclone.vcxproj -> C:\Users\COOL USER\source\repos\Papes Pls\Debug\paperclone.exe
+﻿cl : Command line warning D9002: ignoring unknown option '/Y'
+  gamedata.cpp
+c:\users\nathan\desktop\possible final pa9\pa9-repository-master\paperclone\gamedata.cpp(292): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  paperclone.vcxproj -> C:\Users\Nathan\Desktop\POSSIBLE FINAL PA9\PA9-Repository-master\Debug\paperclone.exe
+  paperclone.vcxproj -> C:\Users\Nathan\Desktop\POSSIBLE FINAL PA9\PA9-Repository-master\Debug\paperclone.pdb (Partial PDB)

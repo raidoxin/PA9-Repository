@@ -150,7 +150,7 @@ void gamedata::advance(bool playerjudgement)
 //This is the primary display function
 // this is a placeholder for now
 // TRhis should handle drawing the relevant documents to the screen
-void gamedata::displaychara(sf::Window window)
+void gamedata::displaychara(sf::RenderWindow & window)
 {	
 	passport_dox.draw(window);
 	passport_dox.draw(window);
