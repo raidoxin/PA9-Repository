@@ -97,7 +97,6 @@ visa::corrupt_visatype(odds);
 void visa::draw(sf::RenderWindow & window)
 {
 
-
 	string sex_str;
 	sf::Font normal;
 	sf::Font bold;
@@ -111,7 +110,7 @@ void visa::draw(sf::RenderWindow & window)
 		//Error
 	}
 
-	sf::RectangleShape card(sf::Vector2f(700, 650));
+	sf::RectangleShape card(sf::Vector2f(770, 650));
 	sf::Text static_info_IDno("ID: ", bold, 30); // says id is bold,30 pixels
 	sf::Text static_info_DOB("DOB: ", bold, 30); //These are constants for all id
 	sf::Text static_info_SEX("SEX: ", bold, 30);

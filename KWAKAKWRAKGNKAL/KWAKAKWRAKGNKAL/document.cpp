@@ -283,7 +283,7 @@ void passport::draw(sf::RenderWindow & window)
 		//Error
 	}
 
-	sf::RectangleShape card(sf::Vector2f(700, 500));
+	sf::RectangleShape card(sf::Vector2f(770, 500));
 	sf::Text static_info_IDno("ID: ", bold, 30); // says id is bold,30 pixels
 	sf::Text static_info_DOB("DOB: ", bold, 30); //These are constants for all id
 	sf::Text static_info_SEX("SEX: ", bold, 30);
@@ -388,7 +388,6 @@ void passport::draw(sf::RenderWindow & window)
 	window.draw(weight_draw);
 	window.draw(date_draw);
 	window.draw(country_draw);
-	
 	
 }
 
