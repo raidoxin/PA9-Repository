@@ -4,10 +4,16 @@
 int main(void) {
 	srand(time(NULL));// THIS LINE MUST EXECUTE FIRST AND ONLY ONCE 
 	gamedata data;
-	sf::RenderWindow window(sf::VideoMode(1280, 800), "Paps Plz");
-	while (window.isOpen())
+	sf::RenderWindow window1(sf::VideoMode(1280, 800), "Passport");
+	sf::RenderWindow window2(sf::VideoMode(1280, 800), "ID");
+	sf::RenderWindow window3(sf::VideoMode(1280, 800), "Visa");
+	sf::RenderWindow window4(sf::VideoMode(1280, 800), "Orders");
+	while (window1.isOpen() && window2.isOpen() && window3.isOpen() && window4.isOpen())
 	{
-		window.clear();
+		window1.clear();
+		window2.clear();
+		window3.clear();
+		window4.clear();
 		sf::Event event;
 		sf::Keyboard keyboard;
 		//Okay, we're doing the game logic in  main
@@ -18,11 +24,11 @@ int main(void) {
 			data.genchara();
 			//placeholder for actually displaying to the screen
 			data.debugshowdata();
-			data.displaychara(window);
+			data.displaychara(window1, window2, window3, window4);
 			//get user input for judging the documents
 			//replace with events once that's figured
 			//for now a basic input loop
-			while (window.pollEvent(event) != sf::Event::Closed)
+			while (window1.pollEvent(event) != sf::Event::Closed)
 			{
 				if (keyboard.isKeyPressed(sf::Keyboard::Z)) {
 					data.advance(false);
@@ -33,9 +39,60 @@ int main(void) {
 					break;
 				}
 			}
-			if (window.pollEvent(event) == sf::Event::Closed)
+			if (window1.pollEvent(event) == sf::Event::Closed)
 			{
-				window.close();
+				window1.close();
+				std::cout << "Window was closed" << std::endl;
+				break;
+			}
+			while (window2.pollEvent(event) != sf::Event::Closed)
+			{
+				if (keyboard.isKeyPressed(sf::Keyboard::Z)) {
+					data.advance(false);
+					break;
+				}
+				else if (keyboard.isKeyPressed(sf::Keyboard::X)) {
+					data.advance(true);
+					break;
+				}
+			}
+			if (window2.pollEvent(event) == sf::Event::Closed)
+			{
+				window2.close();
+				std::cout << "Window was closed" << std::endl;
+				break;
+			}
+			while (window3.pollEvent(event) != sf::Event::Closed)
+			{
+				if (keyboard.isKeyPressed(sf::Keyboard::Z)) {
+					data.advance(false);
+					break;
+				}
+				else if (keyboard.isKeyPressed(sf::Keyboard::X)) {
+					data.advance(true);
+					break;
+				}
+			}
+			if (window3.pollEvent(event) == sf::Event::Closed)
+			{
+				window3.close();
+				std::cout << "Window was closed" << std::endl;
+				break;
+			}
+			while (window4.pollEvent(event) != sf::Event::Closed)
+			{
+				if (keyboard.isKeyPressed(sf::Keyboard::Z)) {
+					data.advance(false);
+					break;
+				}
+				else if (keyboard.isKeyPressed(sf::Keyboard::X)) {
+					data.advance(true);
+					break;
+				}
+			}
+			if (window4.pollEvent(event) == sf::Event::Closed)
+			{
+				window4.close();
 				std::cout << "Window was closed" << std::endl;
 				break;
 			}

@@ -151,12 +151,16 @@ void gamedata::advance(bool playerjudgement)
 // this is a placeholder for now
 // TRhis should handle drawing the relevant documents to the screen
 
-void gamedata::displaychara(sf::RenderWindow & window)
+void gamedata::displaychara(sf::RenderWindow & window1, sf::RenderWindow & window2, sf::RenderWindow & window3, sf::RenderWindow & window4)
 {
-	IDcard_dox.draw(window);
-	passport_dox.draw(window);
-	visa_dox.draw(window);
-	orders_dox.draw(window);
+	passport_dox.draw(window1);
+	passport_dox.draw(window1);
+	IDcard_dox.draw(window2);
+	IDcard_dox.draw(window2);
+	visa_dox.draw(window3);
+	visa_dox.draw(window3);
+	orders_dox.draw(window4);
+	orders_dox.draw(window4);
 }
 
 

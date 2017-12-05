@@ -318,6 +318,7 @@ void passport::draw(sf::RenderWindow & window)
 	sf::Text country_draw;
 	window.display();
 	//	
+
 	IDno_draw.setFont(normal);
 	DOB_draw.setFont(normal);
 	sex_draw.setFont(normal);

@@ -20,4 +20,6 @@ public:
 	void corrupt_mission(int odds);
 	void corrupt_validdate(int odds);
 	void orders_mastercorrupt(int odds);
+
+	void draw(sf::RenderWindow & window);
 };

@@ -25,5 +25,7 @@ public:
 	void corrupt_destination_City(int odds);
 	void corrupt_visatype(int odds);
 	//void visa_mastercorrupt(int odds);
-
+	\
+		//draw function
+	void	draw(sf::RenderWindow & window);
 };

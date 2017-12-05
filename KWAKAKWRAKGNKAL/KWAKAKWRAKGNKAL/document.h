@@ -15,6 +15,9 @@ using std::string;
 using std::endl;
 
 class passport {
+	friend class IDcard;
+	friend class visa;
+	friend class orders;
 protected:
 	//for use later
 	bool valid;

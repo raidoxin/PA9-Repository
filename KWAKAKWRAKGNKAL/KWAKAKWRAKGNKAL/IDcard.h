@@ -20,6 +20,10 @@ public:
 	// print override prints relevant document data;
 	void print_all();
 
+	//draw for ID
+
+	void draw(sf::RenderWindow & window);
+
 	//operator overload for quick copy of document data;
 	passport & operator=(passport & copied);
 };

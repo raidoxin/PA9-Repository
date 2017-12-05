@@ -1,9 +1,14 @@
-﻿  document.cpp
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(132): warning C4018: '<': signed/unsigned mismatch
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(147): warning C4018: '<': signed/unsigned mismatch
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(167): warning C4018: '<': signed/unsigned mismatch
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(179): warning C4018: '<': signed/unsigned mismatch
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(210): warning C4018: '<': signed/unsigned mismatch
-c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\document.cpp(223): warning C4018: '<': signed/unsigned mismatch
+﻿  orders.cpp
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\orders.cpp(42): warning C4018: '<': signed/unsigned mismatch
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\orders.cpp(54): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  gamedata.cpp
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\gamedata.cpp(273): warning C4305: 'argument': truncation from 'int' to 'char'
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\gamedata.cpp(273): warning C4309: 'argument': truncation of constant value
+c:\users\nathan\documents\visual studio 2015\projects\kwakakwrakgnkal\kwakakwrakgnkal\gamedata.cpp(297): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
   KWAKAKWRAKGNKAL.vcxproj -> C:\Users\Nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Debug\KWAKAKWRAKGNKAL.exe
   KWAKAKWRAKGNKAL.vcxproj -> C:\Users\Nathan\documents\visual studio 2015\Projects\KWAKAKWRAKGNKAL\Debug\KWAKAKWRAKGNKAL.pdb (Full PDB)
